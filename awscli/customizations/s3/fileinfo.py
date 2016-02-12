@@ -344,11 +344,10 @@ class FileInfo(TaskInfo):
                 grantee['Type'] = 'Group'
 
         self.client.put_object_acl(
-                Bucket=bucket, Key=key, AccessControlPolicy=acl
+            Bucket=bucket, Key=key, AccessControlPolicy=acl
         )
 
-
-def delete(self):
+    def delete(self):
         """
         Deletes the file from s3 or local.  The src file and type is used
         from the file info object.
